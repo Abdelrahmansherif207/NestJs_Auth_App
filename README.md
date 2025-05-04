@@ -40,25 +40,38 @@ The project also includes **Swagger API documentation** for easy interaction wit
 ## UI Examples
 
 Below are some UI examples to demonstrate how the application interacts with the user:
+### 1. **Signup Conflict**
+   - **Description**: This screenshot shows an error when a user tries to sign up with an email that's already registered in the system.
+   - ![Signup Conflict](./screenshots/signup-conflict.png)
 
-### 1. **Sign-Up Page**
+### 2. **Successful Signup**
+   - **Description**: This screenshot shows the successful creation of a user account during the signup process.
+   - ![Successful Signup](./screenshots/signup.png)
 
-![Sign-Up UI Example](screenshot/signup)
+### 3. **SignUp DTO Validation**
+   - **Description**: This screenshot shows the validation error when a user tries to sign up with invalid data. The API returns an error due to improper request formatting.
+   - ![SignUp DTO Validation](./screenshots/signDto-validation.png)
 
-- Users can register with their email, password, full name, phone number, and age.
-- A successful registration will return a JWT token.
+### 4. **Signin with Incorrect Credentials**
+   - **Description**: This screenshot demonstrates an invalid login attempt with incorrect credentials, resulting in an error message.
+   - ![Signin Wrong](./screenshots/signin-wrong.png)
 
-### 2. **Sign-In Page**
+### 5. **Successful Signin**
+   - **Description**: This screenshot shows a successful login where the user is authenticated and granted access to the system.
+   - ![Successful Signin](./screenshots/signin.png)
 
-![Sign-In UI Example](https://via.placeholder.com/600x300?text=Sign-In+Page+Example)
+### 6. **Unauthorized Access**
+   - **Description**: This screenshot demonstrates an error message that appears when trying to access a protected route without proper authorization (e.g., missing or invalid token).
+   - ![Unauthorized Access](./screenshots/unauth.png)
 
-- Users can sign in with their email and password.
-- On successful sign-in, a JWT token is returned for accessing protected routes.
+### 7. **Profile Request Success**
+   - **Description**: This screenshot shows a successful request for fetching the user's profile information.
+   - ![Profile Request Success](./screenshots/profile.png)
 
-### 3. **Profile Page**
+### 8. **Get All Users (Excluding Current User)**
+   - **Description**: This screenshot shows the list of all users retrieved from the system, excluding the current user.
+   - ![Get All Users](./screenshots/users.png)
 
-![Profile UI Example](https://via.placeholder.com/600x300?text=Profile+Page+Example)
-
-- After sign-in, users can view their profile information.
-- Users can update their information or view other users' profiles.
-
+### 9. **Swagger Documentation**
+   - **Description**: This screenshot shows the interactive Swagger UI for exploring the available API endpoints, testing requests, and understanding the API structure.
+   - ![Swagger UI](./screenshots/swagger.png)
