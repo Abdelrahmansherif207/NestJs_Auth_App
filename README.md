@@ -5,94 +5,73 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+<p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+  <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+  <a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+  <a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+  <a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
   <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project is a **NestJS-based backend** application designed for building a scalable and efficient user authentication system. It includes functionality for user sign-up, sign-in, and user management with basic features such as profile retrieval and listing of other users.
 
-## Project setup
+It uses **JWT (JSON Web Token)** for securing API endpoints and is equipped with a validation system using `class-validator` to ensure that input data is in the correct format.
 
-```bash
-$ npm install
-```
+The project also includes **Swagger API documentation** for easy interaction with the backend through an intuitive UI.
 
-## Compile and run the project
+### Features:
+- User Registration (Sign-up)
+- User Authentication (Sign-in)
+- JWT Authentication
+- User Profile Management
+- Data Validation using `class-validator`
+- Scalable and extensible structure
+- Swagger UI for interactive API documentation
 
-```bash
-# development
-$ npm run start
+## UI Examples
 
-# watch mode
-$ npm run start:dev
+Below are some UI examples to demonstrate how the application interacts with the user:
+### 1. **Signup Conflict**
+   - **Description**: This screenshot shows an error when a user tries to sign up with an email that's already registered in the system.
+   - ![Signup Conflict](./screenshots/signup-conflict.png)
 
-# production mode
-$ npm run start:prod
-```
+### 2. **Successful Signup**
+   - **Description**: This screenshot shows the successful creation of a user account during the signup process.
+   - ![Successful Signup](./screenshots/signup.png)
 
-## Run tests
+### 3. **SignUp DTO Validation**
+   - **Description**: This screenshot shows the validation error when a user tries to sign up with invalid data. The API returns an error due to improper request formatting.
+   - ![SignUp DTO Validation](./screenshots/signDto-validation.png)
 
-```bash
-# unit tests
-$ npm run test
+### 4. **Signin with Incorrect Credentials**
+   - **Description**: This screenshot demonstrates an invalid login attempt with incorrect credentials, resulting in an error message.
+   - ![Signin Wrong](./screenshots/signin-wrong.png)
 
-# e2e tests
-$ npm run test:e2e
+### 5. **Successful Signin**
+   - **Description**: This screenshot shows a successful login where the user is authenticated and granted access to the system.
+   - ![Successful Signin](./screenshots/signin.png)
 
-# test coverage
-$ npm run test:cov
-```
+### 6. **Unauthorized Access**
+   - **Description**: This screenshot demonstrates an error message that appears when trying to access a protected route without proper authorization (e.g., missing or invalid token).
+   - ![Unauthorized Access](./screenshots/unauth.png)
 
-## Deployment
+### 7. **Profile Request Success**
+   - **Description**: This screenshot shows a successful request for fetching the user's profile information.
+   - ![Profile Request Success](./screenshots/profile.png)
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+### 8. **Get All Users (Excluding Current User)**
+   - **Description**: This screenshot shows the list of all users retrieved from the system, excluding the current user.
+   - ![Get All Users](./screenshots/users.png)
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### 9. **Swagger Documentation**
+   - **Description**: This screenshot shows the interactive Swagger UI for exploring the available API endpoints, testing requests, and understanding the API structure.
+   - ![Swagger UI](./screenshots/swagger.png)
